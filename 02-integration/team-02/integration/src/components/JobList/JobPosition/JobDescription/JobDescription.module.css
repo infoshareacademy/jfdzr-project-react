@@ -1,0 +1,18 @@
+.conditions {
+  font-size: 10px;
+  font-weight: bold;
+  color: grey;
+  margin: 10px;
+}
+
+.conditionsPack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.role {
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}

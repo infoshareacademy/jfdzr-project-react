@@ -1,0 +1,9 @@
+.technologies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.lang {
+  margin: 10px;
+}
