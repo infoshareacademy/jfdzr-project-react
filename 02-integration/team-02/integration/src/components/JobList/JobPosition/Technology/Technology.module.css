@@ -6,4 +6,7 @@
 
 .lang {
   margin: 10px;
+  background-color: lightgray;
+  padding: 10px;
+  color: white;
 }
