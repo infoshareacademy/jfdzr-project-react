@@ -1,0 +1,9 @@
+.onDarkClick {
+  background-color: black;
+  color: white;
+}
+
+.onLightClick {
+  background-color: beige;
+  color: black;
+}
