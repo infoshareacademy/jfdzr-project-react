@@ -12,4 +12,7 @@ npx create-react-app context
 gdzie 'context' to nazwa projektu - może być dowolna inna.
 
 Zadanie do wykonania: zaimplementowanie dwóch contextów na podstawie załączonego designu - do obsługi wersji językowych i do zmiany z trybu ciemnego na jasny. Skorzystajcie z załączonych tekstów w języku polskim i angielskim (tłumaczone translatorem, więc mogą być drobne niedociągnięcia :D). Wygląd strony drugorzędny, ważne, aby style zmieniały się razem ze zmianą konktekstu, wszelkie marginesy, wymiary itd pomijamy. Nie tworzymy wersji mobilnej.
-Nie ma konieczności stosowania fontów dołączonych do projektu - zadanie dla chętnych jak zostanie czas. Dodanie sekcji Articles (tej na dole projektu) - zadanie gdy zostanie czas.
+
+Dodanie sekcji Articles (tej na dole projektu) - zadanie gdy zostanie czas.
+
+Nie ma konieczności stosowania fontów dołączonych do projektu - zadanie dla chętnych jak zostanie czas (ale najpierw dodajemy sekcję Articles)
