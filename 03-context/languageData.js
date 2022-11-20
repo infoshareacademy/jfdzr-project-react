@@ -33,6 +33,7 @@ export const languageData = {
     howThePandemicHasSparkedFreshOpportunities:
       "Jak pandemia stworzyła nowe możliwości.",
   },
+
   en: {
     // header
     darkMode: "dark mode",
@@ -80,3 +81,9 @@ export const languageData = {
 // };
 
 // person['name'] // Adnrzej
+
+// news:
+
+// import languageData from '../';
+
+// <h2>{languageData[currentLanguage].new}</h2>
