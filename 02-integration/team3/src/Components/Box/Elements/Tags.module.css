@@ -1,0 +1,18 @@
+.tags{
+    background-color: lightseagreen;
+    border-radius: 2px;
+    font-size: 12px;
+    flex-direction: row;
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    
+}
+
+.tagsBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    
+}
