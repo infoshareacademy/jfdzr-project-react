@@ -1,0 +1,19 @@
+.header {
+    font-size: 30px;
+}
+
+.mainimage{
+    max-width: 50%;
+}
+
+.article {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article li{
+    padding: 0;
+    margin: 0;
+}
