@@ -13,6 +13,13 @@ gdzie 'project-typescript' to nazwa projektu - może być dowolna inna.
 
 Zadanie polega na stworzeniu prostej todo listy korzystając z typescripta oraz napisanie podstawowych testów sprawdzających funkcjonowanie aplikacji.
 
-App.tsx (ze stanem) => TodoList (stan przyjmuje i renderuje za pomocą map() jest zwracany komponent TodoItem)
+Podział aplikacji:
 
-.map(({id, description, isDone})=><TodoItem id={id} description={description} isDone={isDone}/>)
+1. Komponenty:
+
+   - App.tsx (ze stanem), który renderuje:
+   - TodoList (stan przyjmuje i renderuje za pomocą map(). W funkcji map jest zwracany komponent TodoItem)
+
+     .map(({id, description, isDone})=><TodoItem id={id} description={description} isDone={isDone}/>)
+
+   - TodoItem - kliknięcie na TodoItem powoduje zaznaczneie zadania
