@@ -21,8 +21,7 @@ export const TodoAdd = ({addTask} : PropsType) => {
            }
            
            addTask((tasks)=>{
-            return [...tasks, newTask] 
-            
+           return [...tasks, newTask]       
            })
         }
        
