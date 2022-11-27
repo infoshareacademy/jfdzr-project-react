@@ -20,6 +20,4 @@ Podział aplikacji:
    - App.tsx (ze stanem), który renderuje:
    - TodoList (stan przyjmuje i renderuje za pomocą map(). W funkcji map jest zwracany komponent TodoItem)
 
-     .map(({id, description, isDone})=><TodoItem id={id} description={description} isDone={isDone}/>)
-
-   - TodoItem - kliknięcie na TodoItem powoduje zaznaczneie zadania
+   - TodoItem - kliknięcie na TodoItem powoduje zaznaczneie zadania (modyfikuje stan z komponentu App)
