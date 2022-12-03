@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { TodoItem } from "./types";
-import Todo from "./view/Todo/Todo";
+import TodoModule from "./view/TodoModule/TodoModule";
 
 function App() {
   const [todoList, setTodoList] = useState<TodoItem[]>([]);
 
-  return <Todo todoList={todoList} setTodoList={setTodoList} />;
+  return <TodoModule todoList={todoList} setTodoList={setTodoList} />;
 }
 
 export default App;

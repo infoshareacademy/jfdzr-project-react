@@ -1,5 +1,9 @@
 import { TodoItem } from "../../../../types";
-import { TaskDescription } from "./TodoListItem.styles";
+import {
+  TodoDescription,
+  TodoWrapper,
+  DeleteTodoButton,
+} from "./TodoListItem.styles";
 
 interface TodoListItemProps {
   id: number;
@@ -14,7 +18,7 @@ const TodoListItem = ({
   isDone,
   setTodoList,
 }: TodoListItemProps) => {
-  const handleClick = () => {
+  const checkTodo = () => {
     setTodoList((todos) =>
       todos.map((todo) =>
         todo.id !== id
@@ -24,10 +28,17 @@ const TodoListItem = ({
     );
   };
 
+  const deleteTodo = () => {
+    setTodoList((todos) => todos.filter((todo) => todo.id !== id));
+  };
+
   return (
-    <TaskDescription isDone={isDone} onClick={handleClick}>
-      {description}
-    </TaskDescription>
+    <TodoWrapper>
+      <TodoDescription isDone={isDone} onClick={checkTodo}>
+        {description}
+      </TodoDescription>
+      <DeleteTodoButton onClick={deleteTodo}>x</DeleteTodoButton>
+    </TodoWrapper>
   );
 };
 
