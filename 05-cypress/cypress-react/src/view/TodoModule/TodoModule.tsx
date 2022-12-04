@@ -30,10 +30,15 @@ const TodoModule = ({ todoList, setTodoList }: TodoModuleProps) => {
   return (
     <>
       <input
+        id="input"
         value={descriptionInputValue}
         onChange={handleDesciprionInputChange}
       />
-      <button disabled={!descriptionInputValue} onClick={createTodo}>
+      <button
+        id="addNewToDo"
+        disabled={!descriptionInputValue}
+        onClick={createTodo}
+      >
         ADD NEW TODO
       </button>
       <TodoList todoList={todoList} setTodoList={setTodoList} />

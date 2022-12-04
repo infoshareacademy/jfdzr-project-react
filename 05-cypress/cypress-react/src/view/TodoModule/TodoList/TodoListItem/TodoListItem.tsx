@@ -71,14 +71,18 @@ const TodoListItem = ({
         </TodoDescription>
       )}
       {!isEditModeOpen && (
-        <DeleteTodoButton onClick={deleteTodo}>x</DeleteTodoButton>
+        <DeleteTodoButton id="xButton" onClick={deleteTodo}>
+          x
+        </DeleteTodoButton>
       )}
       {isEditModeOpen ? (
         <SaveTodoButton disabled={!todoDescription} onClick={saveModifiedTodo}>
           SAVE
         </SaveTodoButton>
       ) : (
-        <EditTodoButton onClick={openEditMode}>EDIT</EditTodoButton>
+        <EditTodoButton id="editButton" onClick={openEditMode}>
+          EDIT
+        </EditTodoButton>
       )}
     </TodoWrapper>
   );
