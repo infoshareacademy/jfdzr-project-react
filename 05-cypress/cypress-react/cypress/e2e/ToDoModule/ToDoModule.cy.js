@@ -13,7 +13,7 @@ describe("Todo Module Tests", () => {
       cy.get("#xButton").should("be.visible");
       cy.get("#editButton").should("be.visible");
     });
-    it.only("should change style on click task", () => {
+    it.skip("should change style on click task", () => {
       cy.get("#addNewToDo").should("be.visible");
       cy.get("#input").should("be.visible");
       cy.get("#addNewToDo").should("be.disabled");
@@ -34,6 +34,20 @@ describe("Todo Module Tests", () => {
         "text-decoration",
         "line-through rgb(0, 0, 0)"
       );
+    });
+    it.only("should delete task on click button x", () => {
+      cy.get("#addNewToDo").should("be.visible");
+      cy.get("#input").should("be.visible");
+      cy.get("#addNewToDo").should("be.disabled");
+      cy.get("#input").type("zadanie1");
+      cy.get("#addNewToDo").click();
+      cy.contains("zadanie1").should("be.visible");
+      cy.get("#xButton").should("be.visible");
+      cy.get("#editButton").should("be.visible");
+      //checking X button
+      cy.get("#editDescription").should("be.visible");
+      cy.get("#xButton").first().click();
+      cy.get("#editDescription").should("not.exist");
     });
   });
 });
