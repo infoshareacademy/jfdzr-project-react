@@ -61,7 +61,7 @@ const TodoListItem = ({
   return (
     <TodoWrapper>
       {isEditModeOpen ? (
-        <TodoEditInput
+        <TodoEditInput id='to-do-input'
           onChange={handleTodoDesciprionChange}
           defaultValue={description}
         />
@@ -71,14 +71,14 @@ const TodoListItem = ({
         </TodoDescription>
       )}
       {!isEditModeOpen && (
-        <DeleteTodoButton onClick={deleteTodo}>x</DeleteTodoButton>
+        <DeleteTodoButton id='delete-button' onClick={deleteTodo}>x</DeleteTodoButton>
       )}
       {isEditModeOpen ? (
-        <SaveTodoButton disabled={!todoDescription} onClick={saveModifiedTodo}>
+        <SaveTodoButton id='save-button'disabled={!todoDescription} onClick={saveModifiedTodo}>
           SAVE
         </SaveTodoButton>
       ) : (
-        <EditTodoButton onClick={openEditMode}>EDIT</EditTodoButton>
+        <EditTodoButton id='edit-button' onClick={openEditMode}>EDIT</EditTodoButton>
       )}
     </TodoWrapper>
   );
