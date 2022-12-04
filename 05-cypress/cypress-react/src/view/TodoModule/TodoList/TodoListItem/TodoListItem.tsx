@@ -66,7 +66,11 @@ const TodoListItem = ({
           defaultValue={description}
         />
       ) : (
-        <TodoDescription isDone={isDone} onClick={checkTodo}>
+        <TodoDescription
+          id="editDescription"
+          isDone={isDone}
+          onClick={checkTodo}
+        >
           {todoDescription}
         </TodoDescription>
       )}
