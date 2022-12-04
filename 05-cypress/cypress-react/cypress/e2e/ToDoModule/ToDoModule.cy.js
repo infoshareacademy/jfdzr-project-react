@@ -35,7 +35,7 @@ describe("Todo Module Tests", () => {
         "line-through rgb(0, 0, 0)"
       );
     });
-    it.only("should delete task on click button x", () => {
+    it.skip("should delete task on click button x", () => {
       cy.get("#addNewToDo").should("be.visible");
       cy.get("#input").should("be.visible");
       cy.get("#addNewToDo").should("be.disabled");
@@ -48,6 +48,33 @@ describe("Todo Module Tests", () => {
       cy.get("#editDescription").should("be.visible");
       cy.get("#xButton").first().click();
       cy.get("#editDescription").should("not.exist");
+    });
+    it.only("should edit task on click button edit", () => {
+      cy.get("#addNewToDo").should("be.visible");
+      cy.get("#input").should("be.visible");
+      cy.get("#addNewToDo").should("be.disabled");
+      cy.get("#input").type("zadanie1");
+      cy.get("#addNewToDo").click();
+      cy.contains("zadanie1").should("be.visible");
+      cy.get("#xButton").should("be.visible");
+      cy.get("#editButton").should("be.visible");
+      // edit
+      cy.get("#editButton").first().click();
+      cy.get("#editInput")
+        .should("be.visible")
+        .should("have.value", "zadanie1");
+      cy.get("#editButton").should("not.exist");
+      cy.get("#xButton").should("not.exist");
+      cy.get("#xButton").should("not.exist");
+      cy.get("#saveButton").should("exist");
+      cy.get("#editInput").clear();
+      cy.get("#saveButton").should("be.disabled");
+      cy.get("#editInput").type("zadanie2");
+      cy.get("#saveButton").should("exist");
+      cy.get("#saveButton").click();
+      cy.contains("zadanie2").should("be.visible");
+      cy.get("#editButton").should("be.visible");
+      cy.get("#xButton").should("be.visible");
     });
   });
 });
