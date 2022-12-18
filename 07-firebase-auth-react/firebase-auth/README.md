@@ -12,3 +12,7 @@ npx create-react-app auth
 ```
 
 gdzie 'auth' to nazwa projektu - może być dowolna inna.
+
+BONUS:
+
+1. Dodanie opcji przypominania hasła
